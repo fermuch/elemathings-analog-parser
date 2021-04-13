@@ -1,4 +1,4 @@
-module gitlab.com/telemathings/telemathings-analog-parser
+module github.com/fermuch/telemathings-analog-parser
 
 go 1.15
 
