@@ -28,7 +28,11 @@ Value ← name:GroupName? start:Number divider:Divider end:Number Separator? {
 }
 
 GroupName ← name:Identifier Setter {
-    return string(name.(string)), nil
+    nameStr, ok := name.(string)
+    if !ok {
+        return nil, errors.New("invalid identifier")
+    }
+    return nameStr, nil
 }
 
 Identifier  ← [a-z|A-Z|0-9|_|-]* {

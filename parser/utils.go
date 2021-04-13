@@ -1,5 +1,7 @@
 package parser
 
+//go:generate pigeon -nolint -o parser.go tap.peg
+
 import (
 	"errors"
 	"fmt"
